@@ -11,20 +11,29 @@ puts my_variable
 
 
 # def allows defining methods
-# Understand the variable's scope
+# Variable's scope is local
 def say_hello
-    x = "Hello"
+    x = "Hello"   # x points to different memory address because it's in another scope
     puts x
 
     say_goodbye
 end
 
 def say_goodbye
-    x = "Goodbye"
+    x = "Goodbye"  # x points to different memory address because it's in another scope
     puts x
 end
 
-x = 'Let\'s check variable scope'
+x = 'Let\'s check variable scope'   # x points to different memory address because it's in another scope
 puts x
 
 say_hello
+
+# Since it's local scope
+# If you define a variable outside, and we try to use in a local scope --> We get an error
+
+y = "Hello"
+def foo
+    puts y
+end
+foo
