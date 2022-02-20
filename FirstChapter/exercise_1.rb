@@ -5,10 +5,11 @@ name = gets.chomp
 print 'Introduce your last name: '
 last_name = gets.chomp
 
-print "Hello #{name} #{last_name}"
+puts "Hello #{name} #{last_name}"
 
-puts 'Please, introduce a number of 4 digits: '
-number = gets.chomp
+print 'Please, introduce a number of 4 digits: '
+number = gets.to_i   # chomp Returns a new string.
+
 thousands = number % 1000 / 100
 hundreds = number % 1000 % 100 / 10
 units = number % 1000 % 100 % 10
