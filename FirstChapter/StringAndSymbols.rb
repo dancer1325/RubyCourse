@@ -42,8 +42,8 @@ whitespaces = "   "
 puts "Whitespaces aren't considered as empty: #{whitespaces.empty?}"
 
 # Comparing strings
-second_str = 'Ruby is great'
-third_str = str
+second_str = 'Ruby is great'   # Same value as str
+third_str = str                # Pointing to the same variable
 # ==     -- Comparison by value --
 puts "Comparison str == second_str #{str == second_str}"
 puts "Comparison str == second_str.upcase, checking that it's case sensitive #{str == second_str.upcase}"
@@ -57,3 +57,11 @@ puts "Comparison str .== third_str.upcase , checking that it's case sensitive #{
 # equal  -- Comparison by object, not by value --
 puts "Comparison str.equal?(second_str) #{str.equal?(second_str)}"
 puts "Comparison str.equal?(third_str) #{str.equal?(third_str)}"
+
+# Catch information introduced in the console
+print 'Enter whatever you want: '    # Similar to puts, but it doesn't introduce a break line
+var_introduce = gets           # gets Catch the information introduced by the user by console, returning a string.
+
+print 'Enter whatever you want again : '
+var_introduce_again = gets.chomp          # chomp  Returns a new string, removing the separator
+puts "var_introduce #{var_introduce} and var_introduce_again #{var_introduce_again}"
