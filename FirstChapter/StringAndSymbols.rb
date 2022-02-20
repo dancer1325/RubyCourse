@@ -26,12 +26,12 @@ puts " Uppercase: #{str.upcase}"
 # .reverse  -- Reverse text --
 puts " Reverse: #{str.reverse}"
 # .include  -- Check if an object contains an array of characters, being case sensitive --
-puts "Check if it includes Ruby word: str.include?('Ruby')"
-puts "Check if it includes RUBY word: str.include?('RUBY')"
-puts "Check if it includes Java word: str.include?('Java')"
+puts "Check if it includes Ruby word: #{str.include?('Ruby')}"
+puts "Check if it includes RUBY word: #{tr.include?('RUBY')}"
+puts "Check if it includes Java word: #{str.include?('Java')}"
 # .start_with  -- Check if an object starts with an array of characters, being case sensitive --
-puts "Check if it starts with Ruby word: str.start_with?('Ruby')"
-puts "Check if it starts with RUBY word: str.start_with?('RUBY')"
+puts "Check if it starts with Ruby word: #{str.start_with?('Ruby')}"
+puts "Check if it starts with RUBY word: #{str.start_with?('RUBY')}"
 # .size  -- Get # of characters of the string --
 puts "# of characters: #{str.size}"
 # .empty  -- Check if the string is empty --
