@@ -45,15 +45,15 @@ puts "Whitespaces aren't considered as empty: #{whitespaces.empty?}"
 second_str = 'Ruby is great'
 third_str = str
 # ==     -- Comparison by value --
-puts "Comparison str == second_string #{str == second_string}"
-puts "Comparison str == second_string.upcase, checking that it's case sensitive #{str == second_string.upcase}"
+puts "Comparison str == second_str #{str == second_str}"
+puts "Comparison str == second_str.upcase, checking that it's case sensitive #{str == second_str.upcase}"
 puts "Comparison str == third_str #{str == third_str}"
 puts "Comparison str == third_str.upcase, checking that it's case sensitive #{str == third_str.upcase}"
 # .==    -- Comparison by value --
-puts "Comparison str .== second_string #{str .== second_string}"
-puts "Comparison str .== second_string.upcase , checking that it's case sensitive #{str .== second_string.upcase}"
-puts "Comparison str .== third_string #{str .== third_string}"
-puts "Comparison str .== third_string.upcase , checking that it's case sensitive #{str .== third_string.upcase}"
+puts "Comparison str .== second_str #{str .== second_str}"
+puts "Comparison str .== second_str.upcase , checking that it's case sensitive #{str .== second_str.upcase}"
+puts "Comparison str .== third_str #{str .== third_str}"
+puts "Comparison str .== third_str.upcase , checking that it's case sensitive #{str .== third_str.upcase}"
 # equal  -- Comparison by object, not by value --
 puts "Comparison str.equal?(second_str) #{str.equal?(second_str)}"
 puts "Comparison str.equal?(third_str) #{str.equal?(third_str)}"
