@@ -18,3 +18,36 @@ hello = "Hello"
 second_hello = "Hello"
 puts hello.object_id
 puts second_hello.object_id
+
+# String's methods
+str = 'Ruby is great'
+# .upcase   -- Text in uppercase --
+puts " Uppercase: #{str.upcase}"
+# .reverse  -- Reverse text --
+puts " Reverse: #{str.reverse}"
+# .include  -- Check if an object contains an array of characters, being case sensitive --
+puts "Check if it includes Ruby word: str.include?('Ruby')"
+puts "Check if it includes RUBY word: str.include?('RUBY')"
+puts "Check if it includes Java word: str.include?('Java')"
+# .start_with  -- Check if an object starts with an array of characters, being case sensitive --
+puts "Check if it starts with Ruby word: str.start_with?('Ruby')"
+puts "Check if it starts with RUBY word: str.start_with?('RUBY')"
+# .size  -- Get # of characters of the string --
+puts "# of characters: #{str.size}"
+# .empty  -- Check if the string is empty --
+puts "Check if str is empty: #{str.empty}"
+no_whitespace = ""
+puts "If no whitespace at all isn't considered as empty: #{no_whitespace.empty?}"
+whitespaces = "   "
+puts "Whitespaces aren't considered as empty: #{whitespaces.empty?}"
+
+# Comparing strings
+second_str = 'Ruby is great'
+# ==     -- Comparison by value --
+puts "Comparison by == #{str == second_string}"
+puts "Comparison by ==, checking that it's case sensitive #{str == second_string.upcase}"
+# .==    -- Comparison by value --
+puts "Comparison by .== #{str .== second_string}"
+puts "Comparison by .== , checking that it's case sensitive #{str .== second_string.upcase}"
+# equal  -- Comparison by object, not by value --
+puts "Comparison by equal #{str.equal?(second_string)}"
