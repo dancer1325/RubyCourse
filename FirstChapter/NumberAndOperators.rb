@@ -59,9 +59,9 @@ b = true && false
 puts "true && false #{true && false}"
 puts "b #{b}"  # ='s priority < &&'s priority
 # 2. or   /   ||
-a = true or false
-puts "true or false #{true or false}"
+a = false or true
+puts "false or true #{false or true}"
 puts "a #{a}"   # ='s priority > or's priority
-b = true || false
-puts "true || false #{true || false}"
+b = false || true
+puts "false || true #{false || true}"
 puts "b #{b}"  # ='s priority < ||'s priority
