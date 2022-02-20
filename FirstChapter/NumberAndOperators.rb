@@ -19,6 +19,7 @@ puts "5 ** 2 = #{5 ** 2}"      # Power
 
 first_number = 2
 second_number = 4
+third_number = 1
 
 puts "first_number == second_number #{first_number == second_number}"
 puts "first_number.==(second_number) #{first_number.==(second_number)}"  # == is a method
@@ -30,8 +31,9 @@ puts "first_number < second_number #{first_number < second_number}"
 puts "first_number.<(second_number) #{first_number.>(second_number)}"  # < is a method
 
 # Assignment with arithmetic operations
+# Note: Take care in the next examples, because we are reassigning continuously
 puts "first_number += first_number #{first_number += first_number}"
-puts "first_number -= first_number #{first_number -= first_number}"
+puts "first_number -= third_number #{first_number -= third_number}"
 puts "first_number *= first_number #{first_number *= first_number}"
 puts "first_number /= first_number #{first_number /= first_number}"
 puts "first_number %= first_number #{first_number %= first_number}"
