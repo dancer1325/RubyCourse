@@ -39,10 +39,10 @@ end
 # foo  # Commented in order not to interrupt the execution
 
 # Proof that the variables are pointers to memory address
-str = 'Hello'
+str = 'str'
 abc = str
 
-str.replace('Goodbye')
+str.replace('str changed')
 
 puts str
 puts abc
