@@ -10,7 +10,7 @@ puts "Hello #{name} #{last_name}"
 print 'Please, introduce a number of 4 digits: '
 number = gets.to_i   # chomp Returns a new string.
 
-thousands = number % 1000
+thousands = number / 1000
 hundreds = number % 1000 / 100
 tens = number % 1000 % 100 / 10
 units = number % 1000 % 100 % 10
