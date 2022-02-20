@@ -2,7 +2,7 @@
 num = 99
 num = 99.6  # Floating point
 puts "num.round #{num.round}"  # Round a number to the unit
-puts "num.zero #{num.zero}"    # Check if the number is zero
+puts "num.zero #{num.zero?}"    # Check if the number is zero
 
 puts "1 + 1 = #{1 + 1}"       # Ruby syntax indicates to add a whitespace previous and pot to each operator
 puts "#1.+(1) = {1.+(1)}"     # Arithmetical operator as method
