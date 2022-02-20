@@ -37,3 +37,12 @@ def foo
     puts y
 end
 foo
+
+# Demonstration that the variables are pointers to memory address
+str = 'Hello'
+abc = str
+
+str.replace('Goodbye')
+
+puts str
+puts abc
