@@ -35,7 +35,7 @@ puts "Check if it starts with RUBY word: str.start_with?('RUBY')"
 # .size  -- Get # of characters of the string --
 puts "# of characters: #{str.size}"
 # .empty  -- Check if the string is empty --
-puts "Check if str is empty: #{str.empty}"
+puts "Check if str is empty: #{str.empty?}"
 no_whitespace = ""
 puts "If no whitespace at all isn't considered as empty: #{no_whitespace.empty?}"
 whitespaces = "   "
