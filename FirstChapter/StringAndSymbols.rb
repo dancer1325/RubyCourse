@@ -63,5 +63,11 @@ print 'Enter whatever you want: '    # Similar to puts, but it doesn't introduce
 var_introduce = gets           # gets Catch the information introduced by the user by console, returning a string.
 
 print 'Enter whatever you want again : '
-var_introduce_again = gets.chomp          # chomp  Returns a new string, removing the separator
+var_introduce_again = gets.chomp          # chomp  Returns a new string, removing the separator which would have just catch up
 puts "var_introduce #{var_introduce} and var_introduce_again #{var_introduce_again}"
+
+# Symbols
+symbol_without_spaces = :symbol_without_spaces
+symbol_with_spaces = :"symbol with spaces"
+var_to_same_symbol = :symbol_without_spaces
+puts "symbol_without_spaces.object_id == var_to_same_symbol.object_id #{symbol_without_spaces.object_id == var_to_same_symbol.object_id}"
