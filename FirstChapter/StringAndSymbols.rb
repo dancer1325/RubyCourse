@@ -27,7 +27,7 @@ puts " Uppercase: #{str.upcase}"
 puts " Reverse: #{str.reverse}"
 # .include  -- Check if an object contains an array of characters, being case sensitive --
 puts "Check if it includes Ruby word: #{str.include?('Ruby')}"
-puts "Check if it includes RUBY word: #{tr.include?('RUBY')}"
+puts "Check if it includes RUBY word: #{str.include?('RUBY')}"
 puts "Check if it includes Java word: #{str.include?('Java')}"
 # .start_with  -- Check if an object starts with an array of characters, being case sensitive --
 puts "Check if it starts with Ruby word: #{str.start_with?('Ruby')}"
