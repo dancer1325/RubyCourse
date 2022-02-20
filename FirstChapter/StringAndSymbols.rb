@@ -43,11 +43,16 @@ puts "Whitespaces aren't considered as empty: #{whitespaces.empty?}"
 
 # Comparing strings
 second_str = 'Ruby is great'
+third_str = str
 # ==     -- Comparison by value --
 puts "Comparison by == #{str == second_string}"
 puts "Comparison by ==, checking that it's case sensitive #{str == second_string.upcase}"
+puts "Comparison by == #{str == third_str}"
+puts "Comparison by ==, checking that it's case sensitive #{str == third_str.upcase}"
 # .==    -- Comparison by value --
 puts "Comparison by .== #{str .== second_string}"
 puts "Comparison by .== , checking that it's case sensitive #{str .== second_string.upcase}"
+puts "Comparison by .== #{str .== third_string}"
+puts "Comparison by .== , checking that it's case sensitive #{str .== third_string.upcase}"
 # equal  -- Comparison by object, not by value --
 puts "Comparison by equal #{str.equal?(second_string)}"
