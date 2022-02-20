@@ -30,15 +30,15 @@ puts x
 say_hello
 
 # Since it's local scope
-# If you define a variable outside, and we try to use in a local scope --> We get an error
+# If you define a variable outside, and we try to use in a local scope --> We get an error, which interrupts the execution
 
 y = "Hello"
 def foo
     puts y
 end
-foo
+# foo  # Commented in order not to interrupt the execution
 
-# Demonstration that the variables are pointers to memory address
+# Proof that the variables are pointers to memory address
 str = 'Hello'
 abc = str
 
