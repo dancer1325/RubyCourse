@@ -67,5 +67,5 @@ puts "false || true #{false || true}"
 puts "b #{b}"  # ='s priority < ||'s priority
 
 # Ternary operator
-var_ternary == false ? 1 : 2
+var_ternary = false ? 1 : 2
 puts "var_ternary #{var_ternary}"
