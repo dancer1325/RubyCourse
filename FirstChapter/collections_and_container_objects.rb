@@ -45,7 +45,7 @@ puts "b #{b}"
 c = a.+([4,3])      # Generate new array. Similar to the previous one's but managing as objects
 puts "a #{a}"
 puts "c #{c}"
-e = [1, 2, [3, 4, [5], [6, [7, 8]]]    # Sub arrays
+e = [1, 2, [3, 4, [5], [6, [7, 8]]]]    # Sub arrays
 f = e.flatten                          # flatten returns a new array, flatten all the sub arrays, but the original array doesn't change
 puts "e.flatten #{f} , while the original one e #{e}"
 
