@@ -13,7 +13,7 @@ a[0] = ('Alfredo')
 puts "a #{a}"
 a[1] = 'Alfredo'     # Without adding ()
 puts "a #{a}"
-a.[2] = ('Alfredo')  # All in Ruby are objects
+a.[]=(5, 'Alfredo')  # All in Ruby are objects. It adds to the position 5, the value 'Alfredo', and all this code must appear together without space in '='
 puts "a #{a}"
 a.push(6)           # Add a new element at the end of the array
 puts "a #{a}"
