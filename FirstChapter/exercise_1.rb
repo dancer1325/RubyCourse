@@ -8,7 +8,7 @@ last_name = gets.chomp
 puts "Hello #{name} #{last_name}"
 
 print 'Please, introduce a number of 4 digits: '
-number = gets.to_i   # chomp Returns a new string.
+number = gets.to_i   # chomp Returns a new string.  to_i  string --> integer
 
 thousands = number / 1000
 hundreds = number % 1000 / 100
