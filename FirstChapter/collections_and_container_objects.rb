@@ -78,7 +78,8 @@ puts "e.flatten! #{e.flatten!}"                                 # Replace, modif
 # Generate another type of object
 b = ['ab', 'ba', 'a', 'aaa']
 c = b.join                                              # Generate a string, joining all the elements of the array
-d = b.join("-")                                         # Generate a string, joining all the elements of the array, but splitting with the separator
+d = b.join('-')                                         # Generate a string, joining all the elements of the array, but splitting with the separator
+#d = b.join("-")                                         # It's not valid ""
 puts "b #{b} while b.join #{c} while b.join("-") #{d}"
 
 # Query methods
