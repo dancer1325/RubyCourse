@@ -46,8 +46,23 @@ c = a.+([4,3])      # Generate new array. Similar to the previous one's but mana
 puts "a #{a}"
 puts "c #{c}"
 e = [1, 2, [3, 4, [5], [6, [7, 8]]]]    # Sub arrays
-f = e.flatten                          # flatten returns a new array, flatten all the sub arrays, but the original array doesn't change
+f = e.flatten                           # flatten returns a new array, flatten all the sub arrays, but the original array doesn't change
 puts "e.flatten #{f} , while the original one e #{e}"
+g = f.reverse                                       # Reverse the entries of the array, without modifying the original one
+puts "f.reverse #{g}, but the original one #{f}"
+h = ['ab', 'ba', 'a', 'aaa']            # sort just work if the array' s entries are to the same type
+j = h.sort
+puts "h #{h} and sorting h.short #{j}"
+h = [2, 1, 23, 4, 5, 3]                 # sort just work if the array' s entries are to the same type
+j = h.sort
+puts "h #{h} and sorting h.short #{j}"
+h = ['ab',2, 'ba', 4]
+# j = h.sort                            # It's going to throw an error because the entries are from different type
+a = [1,1,1,2,3]
+b = a.uniq                              # Remove all the duplicated elements of the array, returning a new array, but without modifying the original one
+puts "a #{a}, while b #{b}"
+b = a.dup                               # Duplicate, creating a new array
+puts "a #{a} with object_id #{a.object_id} while a.dup #{b} with object_id #{b.object_id}"
 
 # Replace arrays
 d = a
@@ -57,3 +72,21 @@ puts "a #{a} d #{d}"
 a.replace(['Alfredo'])                                          # Replace, modifying the existing array
 puts "a.object_id #{a.object_id} d.object_id #{d.object_id}"
 puts "a #{a} d #{d}"
+
+puts "e.flatten! #{e.flatten!}"                                 # Replace, modifying the existing array, flatten all the sub arrays
+
+# Generate another type of object
+b = ['ab', 'ba', 'a', 'aaa']
+c = b.join                                              # Generate a string, joining all the elements of the array
+d = b.join("-")                                         # Generate a string, joining all the elements of the array, but splitting with the separator
+puts "b #{b} while b.join #{c} while b.join("-") #{d}"
+
+# Query methods
+a = [1, 2, 3, 4, 5, 6]
+puts "a.size #{a.size}"                                         # Array's length
+puts "a.empty? #{a.empty?}"                                     # Check if the array is empty
+puts "a.include? 1 #{a.include? 1}, also possible removing the tailing whitespace a.include?1 #{a.include?1}"       # Check if the array contains an element
+#puts "a.include ?1 #{a.include ?1}                             # It throws an error because ? must be close to include
+puts "a.count #{a.count}, while a.count(1) #{a.count(1)}"       # Count the number of elements. In case that you specify an argument
+puts "a.first #{a.first}, while a.first(3) #{a.first(3)}"       # Get the first element by default. If you specify a list --> List of elements
+puts "a.last #{a.last}"                                         # Get the last element
