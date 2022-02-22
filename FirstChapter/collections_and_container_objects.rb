@@ -136,9 +136,9 @@ b = a.invert                                            # Return a new hash, rem
 puts "a.invert #{b}, while the original one a #{a}"
 
 # Query methods
-a.has_key? :a                                           # Check if there is a key into that hash
-a.has_key?(:a)                                          # Also you can wrap them with ()
-a.empty?                                                # Check if the hash is empty
-a.size                                                  # Get the number of key/values
-a.keys                                                  # Get all the hash's keys
-a.values                                                # Get all the hash's values
+puts "a.has_key? :a #{a.has_key? :a}"                                           # Check if there is a key into that hash
+puts "a.has_key?(:a) #{a.has_key?(:a)}"                                          # Also you can wrap them with ()
+puts "a.empty? #{a.empty?}"                                                # Check if the hash is empty
+puts "a.size #{a.size}"                                                  # Get the number of key/values
+puts "a.keys #{a.keys}"                                                   # Get all the hash's keys
+puts "a.values #{a.values}"                                                # Get all the hash's values
