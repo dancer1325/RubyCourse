@@ -91,3 +91,54 @@ puts "a.include? 1 #{a.include? 1}, also possible removing the tailing whitespac
 puts "a.count #{a.count}, while a.count(1) #{a.count(1)}"       # Count the number of elements. In case that you specify an argument
 puts "a.first #{a.first}, while a.first(3) #{a.first(3)}"       # Get the first element by default. If you specify a list --> List of elements
 puts "a.last #{a.last}"                                         # Get the last element
+
+# Hash
+
+# Ways to initialize a hash
+a = Hash.new('default_value')               # Value which will be returned in case you ask by a key which doesn't exist
+puts "a #{a}"
+a = {}                                      # Empty array
+puts "a #{a}"
+a = {a: 1, b:2}                             # Initialize with several entries. Keys and values are separated simply by whitespaces.
+#a = {:a 1, :b2}                            # Symbols here are indicated with ":" after to the own name. If not it's thrown an error
+puts "a #{a}"
+a = {'Smith' => 'John', 'Jones' => 'Jane'}  # With arrows directly
+puts "a #{a}"
+
+# Adding elements to the hash
+a.[]=(2, 'Alfredo')                     # Add an element to the hash. Necessary to remove all whitespaces
+puts "a.[]=(2, 'Alfredo') #{a}"
+a.[]=('a', 2)                           # Keys and values of the hash can be of different types
+puts "a #{a}"
+a[:b] = 5                               # Add an element without being an object
+puts "a #{a}"
+puts "a[4] #{a[4]}"                     # If you try to find an entry by a key which doesn't exist --> nil is got
+a = {'Smith' => 'John', 'Jones' => 'Jane'}
+b = {'Smith' => 'Jim'}
+c = a.merge! b
+puts "a.merge! b #{c}, but it has modified a #{a}"    # Modify the original hash. In this specific example, an element has been modified because the key matched
+d = {'Perez' => 'Jose'}
+e = a.merge!d
+puts "a.merge! d #{e}, but it has modified a #{a}"    # Modify the original hash. In this specific example, an element has been replaced
+
+# Get elements of the hash
+puts "a[:hello] #{a[:hello]}"           # Retrieve a value based on the key. If they key doesn't exist --> Default value is returned
+puts "a[2] #{a[2]}"                     # Retrieve a value based on the key which exists
+puts "a.[](2) #{a.[](2)}}"              # Retrieve a value based on the key as method
+
+# Generate a new hash based on others
+a = {'Smith' => 'John', 'Jones' => 'Jane'}
+b = {'Smith' => 'Jim'}
+c = a.merge b                                           # Return a new hash, without modifying the previous one
+puts "a.merge b #{c}, but it hasn't modified a #{a}"
+a = {a: 1, b: 3, c: 4, d: 1, e:1}
+b = a.invert                                            # Return a new hash, removing the duplicated new keys without modifying the original one
+puts "a.invert #{b}, while the original one a #{a}"
+
+# Query methods
+a.has_key? :a                                           # Check if there is a key into that hash
+a.has_key?(:a)                                          # Also you can wrap them with ()
+a.empty?                                                # Check if the hash is empty
+a.size                                                  # Get the number of key/values
+a.keys                                                  # Get all the hash's keys
+a.values                                                # Get all the hash's values
