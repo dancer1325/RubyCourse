@@ -63,3 +63,22 @@ end
 block_sending_several_arguments do |num1, num2, num3|
     puts "[block_sending_several_arguments] whose num is #{num1}, #{num2} and #{num3}"
 end
+
+
+# Procs
+# Ruby's data type, which contain blocks
+
+# Ways to initialize a Proc
+proc_1 = Proc.new { puts '[proc_1] ' }
+proc_1.call                             # Invoke the proc === Invoke a block
+proc_2 = proc { puts '[proc_2] ' }
+proc_2.call                             # Invoke the proc === Invoke a block
+
+# Lambda
+# Ruby's data type, which contain blocks
+
+# Ways to initialize a Lambda
+lambda_1 = lambda { puts '[lambda_1] '}
+lambda_1.call                           # Invoke the lambda === Invoke a block
+lambda_2 = -> { puts '[lambda_2] '}
+lambda_2.call                           # Invoke the lambda === Invoke a block
