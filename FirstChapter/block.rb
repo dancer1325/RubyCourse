@@ -31,3 +31,20 @@ block_test_passing_block do
 end
 #   2.2 {BlockCode}
 block_test_passing_block {puts '[block_test_passing_block_{}] the block'}
+
+# ----------
+
+# Return the execution to the block outside the method, and sending arguments
+def block_sending_arguments
+    yield(1)
+    yield(2)
+    yield(3)
+end
+
+# Invoke the method, sending a block
+# 1 do BlockCode end
+block_sending_arguments do |num|
+    puts '[block_sending_arguments_do_blockcode_end] whose num is #{num}'
+end
+# 2 {BlockCode}
+block_sending_arguments {puts '[block_sending_arguments_{}] whose num is #{num}'
