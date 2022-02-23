@@ -47,5 +47,19 @@ block_sending_arguments do |num|
     puts "[block_sending_arguments_do_blockcode_end] whose num is #{num}"
 end
 # 2 {BlockCode}
-# block_sending_arguments { [block_sending_arguments_{}] whose num is  |num| }
+# block_sending_arguments { puts " [block_sending_arguments_{}] whose num is  #{|num|} "}       # It doesn't compile
+# block_sending_arguments { puts " [block_sending_arguments_{}] whose num is  #{num} "}         # It doesn't compile
+# block_sending_arguments { puts " [block_sending_arguments_{}] whose num is "  |num| }         # It doesn't compile
+# block_sending_arguments { [block_sending_arguments_{}] whose num is  |num| }                  # It doesn't compile
 block_sending_arguments { |num| }
+
+
+def block_sending_several_arguments
+    yield(1, 11, 12)
+    yield(2, 22)
+    yield(3)
+end
+
+block_sending_several_arguments do |num1, num2, num3|
+    puts "[block_sending_several_arguments] whose num is #{num1}, #{num2} and #{num3}"
+end
