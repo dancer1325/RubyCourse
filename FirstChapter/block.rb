@@ -53,11 +53,11 @@ end
 # block_sending_arguments { [block_sending_arguments_{}] whose num is  |num| }                  # It doesn't compile
 block_sending_arguments { |num| }
 
-
+# Several arguments can be returned to the block
 def block_sending_several_arguments
     yield(1, 11, 12)
-    yield(2, 22)
-    yield(3)
+    yield(2, 22)                # Not problem if you send just return 2 values here
+    yield(3)                    # Not problem if you send just return 1 value here
 end
 
 block_sending_several_arguments do |num1, num2, num3|
