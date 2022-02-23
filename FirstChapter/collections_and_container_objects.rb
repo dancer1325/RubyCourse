@@ -6,8 +6,8 @@ puts "Array.new(3) #{Array.new(3)}"
 puts "Array.new(3, 'hey!') #{Array.new(3, 'hey!')}"
 puts "[]) #{[]}"
 puts "[1, 'hello']) #{[1, 'hello']}"
-puts "%w(#{foo} Bar Bar\ with\ space) #{%w(#{foo} Bar Bar\ with\ space)}"   # Non-interpolated array of words
 foo = "Foo"
+puts "%w(#{foo} Bar Bar\ with\ space) #{%w(#{foo} Bar Bar\ with\ space)}"   # Non-interpolated array of words
 puts "%W(#{foo} Bar Bar\ with\ space) #{%W(#{foo} Bar Bar\ with\ space)}"   # Interpolated array of words
 
 
