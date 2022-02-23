@@ -20,3 +20,4 @@ chosen_value_by_array = country_array[chosen_key - 1]
 chosen_value_by_hash = country_hash[chosen_key]
 
 puts " Chosen key is #{chosen_key} whose reverse value is by array #{chosen_value_by_array.reverse} and by hash #{chosen_value_by_hash.reverse}"
+
