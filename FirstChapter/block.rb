@@ -47,4 +47,4 @@ block_sending_arguments do |num|
     puts "[block_sending_arguments_do_blockcode_end] whose num is #{num}"
 end
 # 2 {BlockCode}
-block_sending_arguments {"[block_sending_arguments_{}] whose num is " |num| }
+block_sending_arguments { [block_sending_arguments_{}] whose num is  |num| }
