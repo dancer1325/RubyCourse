@@ -1,0 +1,33 @@
+# Define a method, passing a block
+
+# 1. Using yield
+def block_test
+    puts 'the method'
+    yield if block_given?           # yield returns the control to the part in which the method has been invoked
+                                    # block_given Built-in function in the methods to identify if the method invoked received a block
+    puts 'the method again'
+end
+
+# Invoke the method, sending a block
+#   1.1 do BlockCode end
+block_test do
+    puts 'the block'
+end
+#   1.2 {BlockCode}
+block_test {puts 'the block'}
+
+# 2. Passing the block as argument
+def block_test_passing_block(&block)    # $block should be the last method's argument
+    puts 'the method'
+    block.call if block_given?      # yield returns the control to the part in which the method has been invoked
+                                    # block_given Built-in function in the methods to identify if the method invoked received a block
+    puts 'the method again'
+end
+
+# Invoke the method, sending a block
+#   2.1 do BlockCode end
+block_test_passing_block do
+    puts 'the block'
+end
+#   2.2 {BlockCode}
+block_test_passing_block {puts 'the block'}
