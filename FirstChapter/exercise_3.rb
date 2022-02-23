@@ -1,6 +1,6 @@
 puts 'Welcome to the exercise 3'
 
-print "Please choose a number of your desired country to reverse!"
+puts "Please choose a number of your desired country to reverse!"
 puts ' 1 - spain'
 puts ' 2 - france'
 puts ' 3 - uk'
@@ -19,5 +19,4 @@ chosen_key = gets.to_i
 chosen_value_by_array = country_array[chosen_key - 1]
 chosen_value_by_hash = country_hash[chosen_key]
 
-puts " Chosen key is #{chosen_key} whose reverse value is by array #{chosen_value_by_array.reverse} and
-by hash #{chosen_value_by_hash.reverse}"
+puts " Chosen key is #{chosen_key} whose reverse value is by array #{chosen_value_by_array.reverse} and by hash #{chosen_value_by_hash.reverse}"
