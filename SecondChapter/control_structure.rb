@@ -105,5 +105,22 @@ while n < 10
 end
 
 # 2) {BlockCode}
-n = 1 while n < 10              # In 1! line of code
+n = 1
+n += 1 while n < 10              # In 1! line of code
+
+#until
+# It's a looping conditional, but the condition is opposite to while one
+# 1) BlockCode end
+n = 1
+until n >= 11
+    puts "[Loop_with_until_BlockCode_end] n #{n}"
+    n += 1
+    puts "[Loop_with_until_BlockCode_end] n #{n}"
+    next unless n == 100
+    break                       # break directly
+end
+
+# 2) {BlockCode}
+n = 1
+n += 1 while n >= 11              # In 1! line of code
 
