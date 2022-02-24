@@ -69,3 +69,6 @@ puts "b #{b}"  # ='s priority < ||'s priority
 # Ternary operator
 var_ternary = false ? 1 : 2
 puts "var_ternary #{var_ternary}"
+
+# Other methods
+put "first_number #{first_number} is even? #{first_number.even?}"
