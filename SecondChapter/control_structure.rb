@@ -38,13 +38,23 @@ puts "Exit the program? A) Yes or B) Not : "
 answer = gets.chomp
 case answer
 when 'Yes'
-    puts "Your answer was #{answer}"
+    puts "[Case] Your answer was #{answer}"
     exit                        # Not continue checking the rest
 when "Not"                      # Valid either simple or double quotes
-    puts "Your answer was #{answer}"
+    puts "[Case] Your answer was #{answer}"
     exit                        # Not continue checking the rest
 else
-    puts "Unknown answer #{answer}"
+    puts "[Case] Unknown answer #{answer}"
 end
 
+# Previous code can be done by multiples if and elsif
+if answer == 'Yes'
+    puts "[If-Elsif-Else] Your answer was #{answer}"
+    exit
+elsif answer == "Not"
+    puts "[If-Elsif-Else] Your answer was #{answer}"
+    exit
+else
+    puts "[If-Elsif-Else] Unknown answer #{answer}"
+end
 
