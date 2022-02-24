@@ -23,8 +23,8 @@ end
 puts "Original collection array #{array}, and the new one #{array_new}"
 
 # 1.2 {BlockCode}
-array_new_with_block = array.map { |element| puts "Original collection array #{array}, and the new one #{array_new}" element + 1 }
-
+array_new_with_block = array.map { |element| element + 1 }
+# array_new_with_block = array.map { |element| puts "Original collection array #{array}, and the new one #{array_new}" element + 1 }        # Not possible to add several expressions in 1 line
 
 # 2. Under hash
 hash.map do |key, value|       # ElementS returned by the hash, that in this case are the key and value
