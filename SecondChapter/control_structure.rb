@@ -43,6 +43,6 @@ when "Not"
     puts "Your answer was #{answer}"
     exit                        # Not continue checking the rest
 else
-    puts "Unknown answer"
+    puts "Unknown answer #{answer}"
 end
 
