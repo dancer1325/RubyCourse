@@ -22,10 +22,17 @@ array_new = array.map do |element|         # Element - Returned by the array, th
 end
 puts "Original collection array #{array}, and the new one #{array_new}"
 
+# 1.1.1 You can map to another object
+array_new_mapping_to_other_objects = array.map do |element|
+    { element: element}             # Mapping from Array of Integers --> Array of Hash
+end
+puts "Original collection array #{array}, and the new one #{array_new_mapping_to_other_objects}"
+
 # 1.2 {BlockCode}
 array_new_with_block = array.map { |element| element + 1 }
 # array_new_with_block = array.map { |element| puts "Original collection array #{array}, and the new one #{array_new}" element + 1 }        # Not possible to add several expressions in 1 line
 
+// TODO: How does it work?
 # 2. Under hash
 hash.map do |key, value|       # ElementS returned by the hash, that in this case are the key and value
      "#{key}, #{value}"
