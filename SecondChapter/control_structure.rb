@@ -88,7 +88,7 @@ loop do
     puts "[Loop_with_next] n #{n}"
     n += 1
     puts "[Loop_with_next] n #{n}"
-    next unless n == 100
+    next unless n == 10
     break                       # break directly
 end
 
