@@ -31,4 +31,18 @@ end
 # B.2]  In 1! line
 puts "[1! line] Forbidden" unless (age > 18)
 
+# case
+# === Switch
+puts "Exit the program? A) Yes or B) Not : "
+answer = gets
+case age
+when "Yes"
+    puts "Your answer was #{answer}"
+    exit                        # Not continue checking the rest
+when "Not"
+    puts "Your answer was #{answer}"
+    exit                        # Not continue checking the rest
+else
+    puts "Unknown answer"
+end
 
