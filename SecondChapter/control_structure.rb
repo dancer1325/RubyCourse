@@ -37,7 +37,7 @@ puts "Exit the program? A) Yes or B) Not : "
 #answer = gets
 answer = gets.chomp
 case age
-when "Yes"
+when 'Yes'
     puts "Your answer was #{answer}"
     exit                        # Not continue checking the rest
 when "Not"
