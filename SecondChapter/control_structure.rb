@@ -5,7 +5,7 @@ age = gets.to_i
 
 if age > 18
     puts "You are an adult"
-elseif age > 10 && age < 18
+elsif age > 10 && age < 18
     puts "You are a teenager"
 else
     puts "You are a baby"
@@ -34,16 +34,17 @@ puts "[1! line] Forbidden" unless (age > 18)
 # case
 # === Switch
 puts "Exit the program? A) Yes or B) Not : "
-#answer = gets
+#answer = gets                  # It doesn't work. Why?
 answer = gets.chomp
 case answer
 when 'Yes'
     puts "Your answer was #{answer}"
     exit                        # Not continue checking the rest
-when "Not"
+when "Not"                      # Valid either simple or double quotes
     puts "Your answer was #{answer}"
     exit                        # Not continue checking the rest
 else
     puts "Unknown answer #{answer}"
 end
+
 
