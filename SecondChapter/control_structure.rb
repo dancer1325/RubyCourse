@@ -14,13 +14,21 @@ end
 
 # unless
 # It's equivalent to !if
-# A) With !if
-if !(age > 18)
-    puts "Forbidden"
-end
 
-unless (age > 18)
-    puts "Forbidden"
+# A) With !if
+# A.1] Block Code
+if !(age > 18)
+    puts "[Block Code] Forbidden"
 end
+# A.2] In 1! line
+puts "[1! line] Forbidden" if !(age > 18)
+
+# B) With unless
+# B.1] Block Code
+unless (age > 18)
+    puts "[Block Code] Forbidden"
+end
+# B.2]  In 1! line
+puts "[1! line] Forbidden" unless (age > 18)
 
 
