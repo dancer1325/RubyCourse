@@ -12,4 +12,15 @@ else
 end
 
 
+# unless
+# It's equivalent to !if
+# A) With !if
+if !(age > 18)
+    puts "Forbidden"
+end
+
+unless (age > 18)
+    puts "Forbidden"
+end
+
 
