@@ -34,9 +34,9 @@ puts "[1! line] Forbidden" unless (age > 18)
 # case
 # === Switch
 puts "Exit the program? A) Yes or B) Not : "
-#answer = gets
-answer = gets.chomp
-case age
+answer = gets
+#answer = gets.chomp
+case answer
 when 'Yes'
     puts "Your answer was #{answer}"
     exit                        # Not continue checking the rest
