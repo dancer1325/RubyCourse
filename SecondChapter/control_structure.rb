@@ -37,10 +37,10 @@ puts "Exit the program? A) Yes or B) Not : "
 #answer = gets                  # It doesn't work. Why?
 answer = gets.chomp
 case answer
-when 'Yes'
+when 'Yes', 'y', 'Y', 'yes'     # Several possible values can be added
     puts "[Case] Your answer was #{answer}"
-    exit                        # Not continue checking the rest
-when "Not"                      # Valid either simple or double quotes
+    exit                        # Not continue checking the rest. Several possible values can be added
+when "Not", 'not', 'n', 'N'                      # Valid either simple or double quotes
     puts "[Case] Your answer was #{answer}"
     exit                        # Not continue checking the rest
 else
