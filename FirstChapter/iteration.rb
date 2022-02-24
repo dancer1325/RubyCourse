@@ -49,11 +49,30 @@ puts "Collection after applying map! #{array}"
 
 # select
 # Last expression into the block of code must be a boolean expression
+
+# 1. Under array
 array = [1, 2, 3, 4]
 puts "Array previously to select operation #{array}"
 array_select = array.select do |element|
-    puts "element #{element}"
-    element > 2
+    puts "element #{element}"                       # Not impact if you add several lines into the block code
+    element > 2                                     # Last line in the block code must be a boolean expression
 end
 puts "Array after select operation #{array}"        # Original array isn't modified
 puts "New Array #{array_select}"
+
+# 2. Under hash
+hash = { "a" => 100, "b" => 200, "c" => 300 }
+# 2.1 do BlockCode end
+puts "Hash previously to select operation #{hash}"
+hash_select = hash.select do |key, value|
+    puts "key #{key} and value #{value}"
+    value < 200
+end
+puts "Hash after select operation #{hash}"
+puts "New Hash #{hash_select}"
+
+# 2.2 {BlockCode}
+puts "Hash previously to select operation #{hash}"
+hash_select = hash.select {|key, value| value < 200}
+puts "Hash after select operation #{hash}"
+puts "New Hash #{hash_select}"
