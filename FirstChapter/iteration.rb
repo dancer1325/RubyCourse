@@ -104,7 +104,7 @@ puts "New Hash #{hash_reject}"
 array = [1, 2, 3, 4]
 puts "Array previously to each_with_object operation #{array}"
 hash_each_with_object = array.each_with_object({}) do |element, hash|   # ({})  Because we are creating a hash. element Array's element in each iteration
-    puts "Element of the array #{element}, and has creating #{hash}"    # hash  It's the new hash creating
+    puts "Element of the array #{element}, and hash already created #{hash}"    # hash  It's the new hash creating
     hash[element.to_s] = element
 end
 puts "Array after each_with_object operation #{array}"        # Original array isn't modified
