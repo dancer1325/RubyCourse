@@ -33,3 +33,6 @@ end
 
 # map!
 # Return the original collection, with the modifications indicated in the map
+puts "Original collection, previous to apply map! #{array}"
+array.map! { |element| element + 1}
+puts "Collection after applying map! #{array}"
