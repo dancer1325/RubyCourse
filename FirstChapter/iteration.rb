@@ -35,10 +35,11 @@ array_new_with_block = array.map { |element| element + 1 }
 # TODO: How does it work?
 
 # 2. Under hash
+# Mapping a Hash --> Array
 hash_map_array = hash.map do |key, value|       # Elements returned by the hash, that in this case are the key and value
      "#{key}, #{value}"
 end
-hash_map_array.to_s                             # Mapping a Hash --> Array
+puts "hash_map_array #{hash_map_array}"
 
 # map!
 # Return the original collection, with the modifications indicated in the map
