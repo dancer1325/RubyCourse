@@ -51,12 +51,12 @@ end
 puts "Exit the program? A) Yes or B) Not : "
 second_answer = gets.chomp
 if second_answer == 'Yes'
-    puts "[If-Elsif-Else] Your answer was #{answer}"
+    puts "[If-Elsif-Else] Your answer was #{second_answer}"
     exit
 elsif second_answer == "Not"
-    puts "[If-Elsif-Else] Your answer was #{answer}"
+    puts "[If-Elsif-Else] Your answer was #{second_answer}"
     exit
 else
-    puts "[If-Elsif-Else] Unknown answer #{answer}"
+    puts "[If-Elsif-Else] Unknown answer #{second_answer}"
 end
 
