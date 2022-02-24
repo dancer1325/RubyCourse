@@ -46,3 +46,13 @@ puts "hash_map_array #{hash_map_array}"
 puts "Original collection, previous to apply map! #{array}"
 array.map! { |element| element + 1}
 puts "Collection after applying map! #{array}"
+
+# select
+# Last expression into the block of code must be a boolean expression
+array = [1, 2, 3, 4]
+puts "Array previously to select operation #{array}"
+a.select do |element|
+    puts "element #{element}"
+    element > 2
+end
+puts "Array after select operation #{array}"
