@@ -48,10 +48,12 @@ else
 end
 
 # Previous code can be done by multiples if and elsif
-if answer == 'Yes'
+puts "Exit the program? A) Yes or B) Not : "
+second_answer = gets.chomp
+if second_answer == 'Yes'
     puts "[If-Elsif-Else] Your answer was #{answer}"
     exit
-elsif answer == "Not"
+elsif second_answer == "Not"
     puts "[If-Elsif-Else] Your answer was #{answer}"
     exit
 else
