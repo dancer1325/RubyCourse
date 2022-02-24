@@ -76,3 +76,26 @@ puts "[BlockCode]Hash previously to select operation #{hash}"
 hash_select = hash.select {|key, value| value < 200}
 puts "[BlockCode] Hash after select operation #{hash}"
 puts "[BlockCode] New Hash #{hash_select}"
+
+# reject
+# Last expression into the block of code must be a boolean expression
+
+# 1. Under array
+array = [1, 2, 3, 4]
+puts "Array previously to reject operation #{array}"
+array_reject = array.reject do |element|
+    puts "element #{element}"                       # Not impact if you add several lines into the block code
+    element > 2                                     # Last line in the block code must be a boolean expression
+end
+puts "Array after reject operation #{array}"        # Original array isn't modified
+puts "New Array #{array_reject}"
+
+# 2. Under hash
+hash = { "a" => 100, "b" => 200, "c" => 300 }
+puts "Hash previously to reject operation #{hash}"
+hash_reject = hash.reject do |key, value|
+    puts "[do BlockCode end] key #{key} and value #{value}"
+    value < 200
+end
+puts "Hash after reject operation #{hash}"
+puts "New Hash #{hash_reject}"
