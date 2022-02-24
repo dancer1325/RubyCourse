@@ -60,3 +60,50 @@ else
     puts "[If-Elsif-Else] Unknown answer #{second_answer}"
 end
 
+# Looping
+
+#loop
+# They will executed forever
+# 1) do BlockCode end
+# loop { puts "looping forever" }
+# 2) {BlockCode}
+# loop do
+#     puts "looping forever"
+# end
+
+# With break
+# Stop the iteration through the elements of the loop
+n = 1
+loop do
+    puts "[Loop_with_break] n #{n}"
+    n += 1
+    puts "[Loop_with_break] n #{n}"
+    break if n > 9              # break BooleanExpressionToEvaluate
+end
+
+# With next
+# Jumps to the next element of the loop
+n = 1
+loop do
+    puts "[Loop_with_next] n #{n}"
+    n += 1
+    puts "[Loop_with_next] n #{n}"
+    next unless n == 100
+    break                       # break directly
+end
+
+#while
+# It's a looping conditional
+# 1) BlockCode end
+n = 1
+while n < 10
+    puts "[Loop_with_while_BlockCode_end] n #{n}"
+    n += 1
+    puts "[Loop_with_while_BlockCode_end] n #{n}"
+    next unless n == 100
+    break                       # break directly
+end
+
+# 2) {BlockCode}
+n = 1 while n < 10              # In 1! line of code
+
