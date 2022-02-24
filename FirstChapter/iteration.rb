@@ -63,16 +63,16 @@ puts "New Array #{array_select}"
 # 2. Under hash
 hash = { "a" => 100, "b" => 200, "c" => 300 }
 # 2.1 do BlockCode end
-puts "Hash previously to select operation #{hash}"
+puts "[do BlockCode end] Hash previously to select operation #{hash}"
 hash_select = hash.select do |key, value|
-    puts "key #{key} and value #{value}"
+    puts "[do BlockCode end] key #{key} and value #{value}"
     value < 200
 end
-puts "Hash after select operation #{hash}"
-puts "New Hash #{hash_select}"
+puts "[do BlockCode end] Hash after select operation #{hash}"
+puts "[do BlockCode end] New Hash #{hash_select}"
 
 # 2.2 {BlockCode}
-puts "Hash previously to select operation #{hash}"
+puts "[BlockCode]Hash previously to select operation #{hash}"
 hash_select = hash.select {|key, value| value < 200}
-puts "Hash after select operation #{hash}"
-puts "New Hash #{hash_select}"
+puts "[BlockCode] Hash after select operation #{hash}"
+puts "[BlockCode] New Hash #{hash_select}"
