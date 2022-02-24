@@ -51,8 +51,9 @@ puts "Collection after applying map! #{array}"
 # Last expression into the block of code must be a boolean expression
 array = [1, 2, 3, 4]
 puts "Array previously to select operation #{array}"
-array.select do |element|
+array_select = array.select do |element|
     puts "element #{element}"
     element > 2
 end
-puts "Array after select operation #{array}"
+puts "Array after select operation #{array}"        # Original array isn't modified
+puts "New Array #{array_select}"
