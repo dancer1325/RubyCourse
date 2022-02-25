@@ -28,3 +28,4 @@ def method_with_any_number_of_arguments *arguments
     arguments.sum
 end
 result = method_with_any_number_of_arguments 1, 2, 3
+puts "[method_with_any_number_of_arguments] result #{result}"
