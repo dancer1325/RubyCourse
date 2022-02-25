@@ -1,4 +1,3 @@
-
 # Method without arguments
 def method_without_arguments
     puts "[Method_without_arguments]"
