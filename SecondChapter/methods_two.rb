@@ -81,5 +81,6 @@ when :mean_of_integers
     test [mean_of_integers(1,1,1,1) == 1, mean_of_integers(2,9,4,1) == 4]   # Array of arguments sent
 when :find_even
     test [find_even(1,1,1,1) ==nil, find_even(2,9,4,1) == [2, 4]]   # Array of arguments sent
-
+else
+    puts "That method doesn't exist"
 end
