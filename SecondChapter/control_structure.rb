@@ -116,9 +116,9 @@ n += 1 while n < 10              # In 1! line of code
 
 # Count down
 number = 5
-while num > 0
+while number > 0
     puts 'Iteration'
-    num -= 1
+    number -= 1
 end
 
 #until
