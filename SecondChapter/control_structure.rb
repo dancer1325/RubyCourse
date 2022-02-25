@@ -141,14 +141,14 @@ n += 1 while n >= 11              # In 1! line of code
 # Number's method
 # 1) do BlockCode end
 10.times do |i|
-    puts i
+    puts "[times_do_BlockCode_end] i #{i}"
 end
 
 array = [1, 2]
-array.length.times do
-    puts i
+array.length.times do |i|
+    puts "[times_do_BlockCode_end] i #{i}"
 end
 
 # 2) {BlockCode}
 
-3.times { puts 'Iteration' }
+3.times { puts '[BlockCode] Iteration' }
