@@ -51,7 +51,12 @@ def hot_or_cold(num_to_guess)
 end
 
 def find_even(*nums)
-    nums.select { |element| element.even? }
+    # 1) Manually running through all the elements
+    result_manually = nums.select { |element| element.even? }
+    puts "result_manually #{result_manually}"
+    # 2)
+    result_calling_proc = nums.select(&:even?)                  # & Indicates to pass the block
+    puts "result_calling_proc #{result_calling_proc}"
 end
 
 
