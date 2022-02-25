@@ -27,3 +27,10 @@ rescue
 end
 
 method(number)      # Invoke the method
+
+# Raise (=== throw) errors
+def raise_errors(number)
+    raise ArgumentError, "Need a number < 10" if number > 10     # Second argument is the message to throw in the exception
+end
+
+raise_errors(number)
