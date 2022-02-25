@@ -66,6 +66,20 @@ test([1,2,3, "string"], :array)
 test({ 1 => "One", 2 => "Two"}, :hash)
 # For Booleans
 test(true, :boolean)
-test(false, :boolean)       # One of the 2 exceptions of false expressions
+test(false, :boolean)       # One of the 2 exceptions of false expressions TODO: Check why is it returning as true expression
 # For nil
-test(nil, :nil)             # One of the 2 exceptions of false expressions
+test(nil, :nil)             # One of the 2 exceptions of false expressions TODO: Check why is it returning as true expression
+
+# nil
+nil_to_s = nil.to_s
+puts "nil_to_s #{nil_to_s}"
+
+nil_to_i = nil.to_i
+puts "nil_to_i #{nil_to_i}"
+
+nil_to_object_id = nil.object_id
+puts "nil_to_object_id #{nil_to_object_id}"
+
+#.nil?
+hash = {a: 1}
+puts "hash[:b].nil? #{hash[:b].nil?} where hash #{hash}"
