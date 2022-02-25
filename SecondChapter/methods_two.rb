@@ -1,6 +1,15 @@
 # Define some methods and to create like a dummy test method
 def max(*nums)                                  # If several arguments are passed, with * --> Convert to array
-    nums.max                                    # max Array's method to return the highest element of the array
+    # 1) Built-in functions
+    result_with_max = nums.max                                    # max Array's method to return the highest element of the array
+    puts "result_with_max #{result_with_max}"
+    # 2) Manually coding
+    result_manually = nums.first
+    nums.each do |element|
+        result_manually = element if element > result_manually
+    end
+    puts "result_manually #{result_manually}"
+    result_manually                             # Not necessary to indicate return
 end
 def longest_string(*strs)
 end
