@@ -39,3 +39,11 @@ result_passing_arguments = method_with_default_value_to_arguments 1
 puts "[method_with_default_value_to_arguments] passing arguments #{result_passing_arguments}"
 result_no_passing_arguments = method_with_default_value_to_arguments
 puts "[method_with_default_value_to_arguments] passing arguments #{result_no_passing_arguments}"
+
+# Symbols as arguments
+# Allows not to remember position of the arguments
+def method_with_symbols_as_arguments (first:, second:, third:)
+    puts "[method_with_symbols_as_arguments]"
+    puts first, second, third
+end
+method_with_symbols_as_arguments second: 'second', third:'third', first:'first'
