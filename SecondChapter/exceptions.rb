@@ -25,3 +25,4 @@ rescue
     exit                                                    # Stop the execution of the rest of the class
 end
 
+method      # Invoke the method
