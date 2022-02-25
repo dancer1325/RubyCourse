@@ -14,7 +14,8 @@ rescue
 end
 
 # rescue without begin
-def method
+# def method                     # If you don't pass the variable, it's going to throw an error, since it's another scope
+def method(number)
     result = 10 / number
     puts "10/ #{number} = #{result}"
 rescue ZeroDivisionError                                    # rescue a specific exception
@@ -25,4 +26,4 @@ rescue
     exit                                                    # Stop the execution of the rest of the class
 end
 
-method      # Invoke the method
+method(number)      # Invoke the method
