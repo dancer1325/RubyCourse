@@ -29,7 +29,16 @@ def word_count(str)
     str.split(' ').length
     str.split(' ').count                        # Similar functionality
 end
+
 def sum(*nums)
+    # 1) Using sum
+    nums.sum
+    puts "nums.sum #{nums.sum}"
+    # 2) Manually coded
+    result = 0
+    nums.each { |num| result += num}
+    puts "result manually coded #{result}"
+    result
 end
 def mean(*nums)
 end
@@ -59,4 +68,6 @@ when :longest_string
     test [longest_string('aaaaaaaa', 'aaa') == 'aaaaaaaa']                  # Array of arguments sent
 when :word_count
     test [word_count('Word count program') == 3, word_count('Word') == 1]   # Array of arguments sent
+when :sum
+    test [sum(1,0,1,1) == 3, sum(2,9,4,1) == 16]   # Array of arguments sent
 end
