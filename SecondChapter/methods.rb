@@ -21,3 +21,10 @@ def method_without_parenthesis num_a, num_b
 end
 result = method_without_parenthesis 1, 2
 puts "[method_without_parenthesis] result #{result}"
+
+# * to pass any number of arguments
+def method_with_any_number_of_arguments *arguments
+    puts arguments
+    arguments.sum
+end
+result = method_with_any_number_of_arguments 1, 2, 3
