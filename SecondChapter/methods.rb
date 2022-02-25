@@ -29,3 +29,13 @@ def method_with_any_number_of_arguments *arguments
 end
 result = method_with_any_number_of_arguments 1, 2, 3
 puts "[method_with_any_number_of_arguments] result #{result}"
+
+# Add default value to the arguments
+def method_with_default_value_to_arguments (discount = 2)
+    puts discount
+    10 - discount
+end
+result_passing_arguments = method_with_default_value_to_arguments 1
+puts "[method_with_default_value_to_arguments] passing arguments #{result_passing_arguments}"
+result_no_passing_arguments = method_with_default_value_to_arguments
+puts "[method_with_default_value_to_arguments] passing arguments #{result_no_passing_arguments}"
