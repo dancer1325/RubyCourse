@@ -17,3 +17,5 @@ def test(*cases, name_of_the_object)
         puts "Unknown name_of_the_object #{name_of_the_object}"
    end
 end
+
+test(*method, :method)
