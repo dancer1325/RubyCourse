@@ -24,7 +24,10 @@ def longest_string(*strs)                       # If several arguments are passe
     puts "result_manually #{result_manually}"
     result_manually                             # Not necessary to indicate return
 end
+
 def word_count(str)
+    str.split(' ').length
+    str.split(' ').count                        # Similar functionality
 end
 def sum(*nums)
 end
@@ -37,7 +40,7 @@ end
 
 
 def test(cases)
-    puts cases.all? ? 'Perfect' : 'Error :S'        #all? Run through the loop, to check if all return true
+    puts cases.all? ? 'Perfect' : 'Error :S'        #all? Run through the loop, to check if each item returns true
 end
 
 exercise = ARGV.first.to_sym                        # Pick the first argument sent in the execution of the file
@@ -51,7 +54,9 @@ puts "Welcome to #{exercise}! Let's test it:"
 
 case exercise
 when :max
-    test [max(3, 4, 2, 1) == 4, max(100, -5, 3, 75) == 100]
+    test [max(3, 4, 2, 1) == 4, max(100, -5, 3, 75) == 100]                 # Array of arguments sent
 when :longest_string
-    test [longest_string('aaaaaaaa', 'aaa') == 'aaaaaaaa']
+    test [longest_string('aaaaaaaa', 'aaa') == 'aaaaaaaa']                  # Array of arguments sent
+when :word_count
+    test [word_count('Word count program') == 3, word_count('Word') == 1]   # Array of arguments sent
 end
