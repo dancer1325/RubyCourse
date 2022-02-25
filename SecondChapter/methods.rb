@@ -46,4 +46,11 @@ def method_with_symbols_as_arguments (first:, second:, third:)
     puts "[method_with_symbols_as_arguments]"
     puts first, second, third
 end
-method_with_symbols_as_arguments second: 'second', third:'third', first:'first'
+method_with_symbols_as_arguments second: 'second', third:'third', first:'first'     # You can send in any order, since the important is the symbol
+
+# Also default value can be indicated
+def method_with_symbols_and_default_value_as_arguments (first: 'first', second: 'second', third:)
+    puts "[method_with_symbols_and_default_value_as_arguments]"
+    puts first, second, third
+end
+method_with_symbols_and_default_value_as_arguments third:'third'     #
