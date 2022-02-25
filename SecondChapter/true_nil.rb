@@ -12,6 +12,7 @@ def test(*cases, name_of_the_object)
             puts "[Method] is a truth expression"
         else
             puts "[Method] is a false expression"
+        end
    else
         puts "Unknown name_of_the_object #{name_of_the_object}"
    end
