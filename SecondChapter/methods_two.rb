@@ -40,11 +40,16 @@ def sum(*nums)
     puts "result manually coded #{result}"
     result
 end
-def mean(*nums)
+
+def mean_of_integers(*nums)                     # This method just works for integer arguments
+    sum(*nums) / nums.length                    # * Used to invoke to the other method, but for using the array just simply the object itself
 end
+
 def hot_or_cold(num_to_guess)
 end
+
 def find_even(*nums)
+    nums.select { |element| element.even? }
 end
 
 
@@ -70,4 +75,9 @@ when :word_count
     test [word_count('Word count program') == 3, word_count('Word') == 1]   # Array of arguments sent
 when :sum
     test [sum(1,0,1,1) == 3, sum(2,9,4,1) == 16]   # Array of arguments sent
+when :mean
+    test [mean(1,1,1,1) == 1, mean(2,9,4,1) == 4]   # Array of arguments sent
+when :find_even
+    test [find_even(1,1,1,1) ==nil, find_even(2,9,4,1) == [2, 4]]   # Array of arguments sent
+
 end
