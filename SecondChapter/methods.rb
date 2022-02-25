@@ -53,4 +53,7 @@ def method_with_symbols_and_default_value_as_arguments (first: 'first', second: 
     puts "[method_with_symbols_and_default_value_as_arguments]"
     puts first, second, third
 end
-method_with_symbols_and_default_value_as_arguments third:'third'     #
+method_with_symbols_and_default_value_as_arguments third:'third'
+
+# Nest methods
+puts ":my_symbol.to_s.upcase.split('_').push(1).join('-') #{:my_symbol.to_s.upcase.split('_').push(1).join('-')} "
