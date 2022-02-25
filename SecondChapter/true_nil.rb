@@ -42,11 +42,13 @@ def test(*cases, name_of_the_object)
             puts "#{cases} is a truth expression"
         else
             puts "#{cases} is a false expression"
+        end
    when :nil
         if cases
             puts "[nil]  is a truth expression"             # Dead code. Hash always return true expression
         else
             puts "[nil] is a false expression"
+        end
    else
         puts "Unknown name_of_the_object #{name_of_the_object}"
    end
