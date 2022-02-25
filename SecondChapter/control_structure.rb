@@ -108,6 +108,19 @@ end
 n = 1
 n += 1 while n < 10              # In 1! line of code
 
+# Invoking continuously to the block
+# def my_loop
+#     yield while true              # Condition which will be always true
+# end
+# my_loop { 'Looping forever' }
+
+# Count down
+number = 5
+while num > 0
+    puts 'Iteration'
+    num -= 1
+end
+
 #until
 # It's a looping conditional, but the condition is opposite to while one
 # 1) BlockCode end
@@ -124,3 +137,18 @@ end
 n = 1
 n += 1 while n >= 11              # In 1! line of code
 
+# times
+# Number's method
+# 1) do BlockCode end
+10.times do |i|
+    puts i
+end
+
+array = [1, 2]
+array.length.times do
+    puts i
+end
+
+# 2) {BlockCode}
+
+3.times { puts 'Iteration' }
