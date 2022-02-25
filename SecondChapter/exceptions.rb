@@ -1,4 +1,4 @@
-# begin rescue
+# begin rescue ensure
 puts "Enter a number"
 number = gets.to_i
 
@@ -11,6 +11,8 @@ rescue ZeroDivisionError                                    # rescue a specific 
 rescue
     puts "Error! Your number introduced was #{number}"
     exit                                                    # Stop the execution of the rest of the class
+ensure
+    puts "Try done"
 end
 
 # rescue without begin
@@ -34,3 +36,17 @@ def raise_errors(number)
 end
 
 raise_errors(number)
+
+# retry
+# Into rescue block of code, to set a condition to launch all from begin block of code
+def try (n_times)
+    yield                               # Normally here it would be another method
+rescue Exception => e
+    n_times -= 1
+    if n_times > 0
+        puts "Error #{e}. Retry!"
+        retry                           # Launch from begin
+    end
+end
+
+try(3) { method(number) }
