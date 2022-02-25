@@ -42,7 +42,9 @@ def sum(*nums)
 end
 
 def mean_of_integers(*nums)                     # This method just works for integer arguments
-    sum(*nums) / nums.length                    # * Used to invoke to the other method, but for using the array just simply the object itself
+    mean_result_of_integers = sum(*nums) / nums.length                    # * Used to invoke to the other method, but for using the array just simply the object itself
+    puts "mean_result_of_integers #{mean_result_of_integers}"
+    mean_result_of_integers
 end
 
 def hot_or_cold(num_to_guess)
