@@ -1,5 +1,5 @@
 module OpenWebinars     # Same module can be used in different files
-#     class dice
+#     class dice        # We get an error because class name must start by capital letter
     class Dice
         attr_accessor :sides
         def initialize(sides)
