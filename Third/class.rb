@@ -12,6 +12,7 @@ class Animal
     end
 end
 class Person < Animal                       # Hierarchy, extending from Animal
+    @@count = 0class_method                 # Class variable. Visible from all class's instances
     def initialize(name, surname, age, gender, mood, status)  # Class's constructor
         @name = name                        # Way to specify the class's attribute to the variable
         @surname                            # Necessary to associate attribute with the variable
@@ -19,6 +20,7 @@ class Person < Animal                       # Hierarchy, extending from Animal
         @gender = gender
         @mood = mood
         @status = status
+        @@count += 1
     end
     def full_name_and_mood                           # Another class's method
         "#{@name} #{@surname} with mood #{@mood}"              # Attributes are accessible via @
@@ -61,6 +63,10 @@ class Person < Animal                       # Hierarchy, extending from Animal
 
     def self.class_method               # Class method. Not executed under an class's instance
         puts "Class method"
+    end
+
+    def self.class_method_about_class_variable
+        puts "Number of persons created is #{@@count}"
     end
 
     private                                 # All block of code which appears below and into the class, is private. Only available inside the class
@@ -120,8 +126,9 @@ person.breathe                              # Get the result of the override met
 person.main_goal                            # Inherited method from the parent
 person.animal_group("vertebrate")           # Inherited method from the parent, but furthermore, we are passing the parents method's argument
 
-person.class_method                         # It throws an error, because it's trying to invoke a class method on class's instance
+#person.class_method                         # It throws an error, because it's trying to invoke a class method on class's instance
 Person.class_method                         # Class method
+Person.class_method_about_class_variable    # Class method. Returns class variable
 
 animal = Animal.new                         # Possible to instantiate a class's object without defining 'initialize' method
 animal.breathe
