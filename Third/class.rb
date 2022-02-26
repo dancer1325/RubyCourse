@@ -16,6 +16,6 @@ class Person
 end
 
 person = Person.new('Alfredo', 'Toledano')
-puts "person.full_name # {person.full_name}"
-puts "person.name # {person.name}"
-puts "person.surname # {person.surname}"
+puts "person.full_name #{person.full_name}"
+puts "person.name #{person.name}"
+puts "person.surname #{person.surname}"
