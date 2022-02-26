@@ -12,7 +12,7 @@ class Animal
     end
 end
 class Person < Animal                       # Hierarchy, extending from Animal
-    @@count = 0class_method                 # Class variable. Visible from all class's instances
+    @@count = 0                             # Class variable. Visible from all class's instances
     def initialize(name, surname, age, gender, mood, status)  # Class's constructor
         @name = name                        # Way to specify the class's attribute to the variable
         @surname                            # Necessary to associate attribute with the variable
