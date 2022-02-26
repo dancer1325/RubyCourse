@@ -54,9 +54,9 @@ class Person < Animal                       # Hierarchy, extending from Animal
         puts "All person breathe by the nose"
     end
 
-    def animal_group()                      # Overriding the parent's method
+    def animal_group(group)            # Overriding the parent's method
         puts "Checking the animal_group for the people"
-        super(vertebrate)                   # It would invoke to the parent's animal_group method, passing the argument
+        super(group)                   # It would invoke to the parent's animal_group method, passing the argument
     end
 
     private                                 # All block of code which appears below and into the class, is private. Only available inside the class
@@ -107,6 +107,9 @@ person.walk                                 # Public method --> Accessible outsi
 #person.is_minor                             # Protected method --> Not accessible outside the class. It will throw an error
 person.breathe                              # Get the result of the override method, not of the parent one
 person.main_goal                            # Inherited method from the parent
+person.animal_group("vertebrate")           # Inherited method from the parent, but furthermore, we are passing the parents method's argument
 
 animal = Animal.new                         # Possible to instantiate a class's object without defining 'initialize' method
 animal.breathe
+animal.animal_group("not specified")
+animal.main_goal
