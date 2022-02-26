@@ -1,4 +1,14 @@
-class Person
+class Animal
+    # initialize method not necessary to create to be able afterwards to instantiate a class's object
+
+    def breathe
+        puts "All animals need to breathe"
+    end
+    def main_goal
+        puts "Main goal of the animals are: 1. Be born, 2. Grow, 3. Reproduce, 4. Die"
+    end
+end
+class Person < Animal                       # Hierarchy, extending from Animal
     def initialize(name, surname, age, gender, mood, status)  # Class's constructor
         @name = name                        # Way to specify the class's attribute to the variable
         @surname                            # Necessary to associate attribute with the variable
@@ -30,6 +40,16 @@ class Person
         puts "I can walk!"
     end
 
+    def is_married
+        is_married = "Single" == self.status    # self. Points to the context, so in this case it's the instance of the class
+        puts "My status is #{@status}"
+        is_married
+    end
+
+    def breathe                             # Overriding the parent's method
+        puts "All person breathe by the nose"
+    end
+
     private                                 # All block of code which appears below and into the class, is private. Only available inside the class
 
     def display_name_age
@@ -48,6 +68,8 @@ class Person
         is_minor
     end
 end
+
+define
 
 # person = Person.new('Alfredo', 'Toledano')  # If we don't pass the right number of arguments, since all are mandatory --> It will throw an error
 person = Person.new('Alfredo', 'Toledano', 29, "Male", "Happy", "Single")
@@ -76,3 +98,8 @@ puts "person.full_name_and_mood #{person.full_name_and_mood}"   # Check the valu
 person.walk                                 # Public method --> Accessible outside the class
 #person.display_name_age                     # Private method --> Not accessible outside the class. It will throw an error
 #person.is_minor                             # Protected method --> Not accessible outside the class. It will throw an error
+person.breathe                              # Get the result of the override method, not of the parent one
+person.main_goal                            # Inherited method from the parent
+
+animal = Animal.new                         # Possible to instantiate a class's object without defining 'initialize' method
+animal.breathe
