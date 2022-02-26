@@ -47,6 +47,7 @@ class Person < Animal                       # Hierarchy, extending from Animal
     end
 
     def breathe                             # Overriding the parent's method
+        super
         puts "All person breathe by the nose"
     end
 
