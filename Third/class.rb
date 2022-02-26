@@ -59,6 +59,10 @@ class Person < Animal                       # Hierarchy, extending from Animal
         super(group)                   # It would invoke to the parent's animal_group method, passing the argument
     end
 
+    def self.class_method               # Class method. Not executed under an class's instance
+        puts "Class method"
+    end
+
     private                                 # All block of code which appears below and into the class, is private. Only available inside the class
 
     def display_name_age
@@ -115,6 +119,9 @@ person.walk                                 # Public method --> Accessible outsi
 person.breathe                              # Get the result of the override method, not of the parent one
 person.main_goal                            # Inherited method from the parent
 person.animal_group("vertebrate")           # Inherited method from the parent, but furthermore, we are passing the parents method's argument
+
+person.class_method                         # It throws an error, because it's trying to invoke a class method on class's instance
+Person.class_method                         # Class method
 
 animal = Animal.new                         # Possible to instantiate a class's object without defining 'initialize' method
 animal.breathe
