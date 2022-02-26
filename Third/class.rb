@@ -77,6 +77,13 @@ class Person < Animal                       # Hierarchy, extending from Animal
         is_minor
     end
 end
+class Worker < Person                       # Another nested hierarchy
+    def initialize(name, surname, age, gender, mood, status, job)
+        super(name, surname, age, gender, mood, status)     # Invoke parent's initialize, passing all those arguments
+        @job = job
+    end
+    attr_reader :job                     # Create "job" getter method
+end
 
 # person = Person.new('Alfredo', 'Toledano')  # If we don't pass the right number of arguments, since all are mandatory --> It will throw an error
 person = Person.new('Alfredo', 'Toledano', 29, "Male", "Happy", "Single")
@@ -113,3 +120,7 @@ animal = Animal.new                         # Possible to instantiate a class's 
 animal.breathe
 animal.animal_group("not specified")
 animal.main_goal
+
+worker = Worker.new('Alfredo', 'Toledano', 29, "Male", "Happy", "Single", "IT Consultant")
+puts "worker.full_name_and_mood #{worker.full_name_and_mood}"   # Inherited method from the parent
+puts "worker.job #{worker.job}"
