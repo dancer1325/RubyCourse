@@ -12,6 +12,7 @@ class Animal
     end
 end
 class Person < Animal                       # Hierarchy, extending from Animal
+    PEOPLE = "PEOPLE"                       # Class's constant
     @@count = 0                             # Class variable. Visible from all class's instances
     def initialize(name, surname, age, gender, mood, status)  # Class's constructor
         @name = name                        # Way to specify the class's attribute to the variable
@@ -138,3 +139,7 @@ animal.main_goal
 worker = Worker.new('Alfredo', 'Toledano', 29, "Male", "Happy", "Single", "IT Consultant")
 puts "worker.full_name_and_mood #{worker.full_name_and_mood}"   # Inherited method from the parent
 puts "worker.job #{worker.job}"
+
+CONSTANT = "CONSTANT"                       # Global constant
+puts "Global constant #{CONSTANT}"
+puts "Person.PEOPLE #{Person::PEOPLE}"      # Class's constant. Required "::" to get access to its value
