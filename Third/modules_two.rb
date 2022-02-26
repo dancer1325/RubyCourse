@@ -15,7 +15,7 @@ module OpenWebinars
         end
 
         def first_letters
-            first_letters = "#{name[0]} #{surname[0]}"
+            first_letters = "#{name[0]}#{surname[0]}"
 #             first_letters_two = "#{name.first} #{surname.first}"    # first TODO: Check in which version or if it exists really
             puts "First letters manually #{first_letters}"
             first_letters
