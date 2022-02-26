@@ -69,8 +69,6 @@ class Person < Animal                       # Hierarchy, extending from Animal
     end
 end
 
-define
-
 # person = Person.new('Alfredo', 'Toledano')  # If we don't pass the right number of arguments, since all are mandatory --> It will throw an error
 person = Person.new('Alfredo', 'Toledano', 29, "Male", "Happy", "Single")
 puts "person.full_name_and_mood #{person.full_name_and_mood}" # Surname doesn't appear
