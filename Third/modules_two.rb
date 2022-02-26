@@ -10,14 +10,14 @@ module OpenWebinars
         def full_name
             full_name = "#{@name} #{@surname}"
             full_name_two = "#{name} #{surname}"      # Another way to access to the variables
-            "Full name with @ #{full_name} and without @ #{full_name_two}"
+            puts "Full name with @ #{full_name} and without @ #{full_name_two}"
             full_name
         end
 
         def first_letters
             first_letters = "#{name[0]} #{surname[0]}"
 #             first_letters_two = "#{name.first} #{surname.first}"    # first TODO: Check in which version or if it exists really
-            "First letters manually #{first_letters}"
+            puts "First letters manually #{first_letters}"
             first_letters
         end
     end
