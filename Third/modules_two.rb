@@ -16,9 +16,11 @@ module OpenWebinars
 
         def first_letters
             first_letters = "#{name[0]} #{surname[0]}"
-            first_letters_two = "#{name.first} #{surname.first}"    # firt Built-in method of String
-            "First letters manually #{first_letters} and using first method #{first_letters_two}"
+#             first_letters_two = "#{name.first} #{surname.first}"    # first TODO: Check in which version or if it exists really
+            "First letters manually #{first_letters}"
             first_letters
         end
     end
 end
+
+person = OpenWebinars::Person.new('Alfredo', 'Toledano', 29)
