@@ -16,7 +16,7 @@ module OpenWebinars     # Same module can be used in different files
     end
 end
 
-dice_one = OpenWebinars::dice.new(9)
+dice_one = OpenWebinars::Dice.new(9)
 puts "dice_one's sides #{dice_one.sides}"
 dice_one.roll
 
