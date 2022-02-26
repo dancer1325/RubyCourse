@@ -4,6 +4,9 @@ class Animal
     def breathe
         puts "All animals need to breathe"
     end
+    def animal_group(group)
+        puts "Animal belongs to #{group}"
+    end
     def main_goal
         puts "Main goal of the animals are: 1. Be born, 2. Grow, 3. Reproduce, 4. Die"
     end
@@ -47,8 +50,13 @@ class Person < Animal                       # Hierarchy, extending from Animal
     end
 
     def breathe                             # Overriding the parent's method
-        super
+        super                               # It would invoke to the parent's breathe method
         puts "All person breathe by the nose"
+    end
+
+    def animal_group()                      # Overriding the parent's method
+        puts "Checking the animal_group for the people"
+        super(vertebrate)                   # It would invoke to the parent's animal_group method, passing the argument
     end
 
     private                                 # All block of code which appears below and into the class, is private. Only available inside the class
