@@ -1,5 +1,6 @@
 module OpenWebinars     # Same module can be used in different files
-    class dice
+#     class dice
+    class Dice
         attr_accessor :sides
         def initialize(sides)
             if !sides.is_a?(Numeric) || sides < 1              # is_a? Method to check if it's the same class
