@@ -24,3 +24,5 @@ module OpenWebinars
 end
 
 person = OpenWebinars::Person.new('Alfredo', 'Toledano', 29)
+person.full_name
+person.first_letters
