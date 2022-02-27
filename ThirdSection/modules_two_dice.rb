@@ -1,8 +1,10 @@
+require 'pry'           # Load this gem to debug
 module OpenWebinars     # Same module can be used in different files
 #     class dice        # We get an error because class name must start by capital letter
     class Dice
         attr_accessor :sides
         def initialize(sides)
+            binding.pry         # Set a break point
             if !sides.is_a?(Numeric) || sides < 1              # is_a? Method to check if it's the same class
                 raise ArgumentError, "Wrong number of sides"   # Throw an error in case that we pass wrong number to create dice's instance
             end
