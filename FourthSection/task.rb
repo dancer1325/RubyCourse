@@ -11,7 +11,7 @@ class Task
         # \? \! Because they are special characters
         return super unless /\w+(\?|\!)/.match?(name.to_s) && STATUSES.include?(status.to_sym)  # super would be the NoMethodError's method_missing
 
-        if name.to_s.end_with('?')
+        if name.to_s.end_with?('?')             # end_with? Check if a string ends with a determined string
             @status == status.to_sym            # Check if they match
         else
             @status = status.to_sym             # Assign a new status to the class's status

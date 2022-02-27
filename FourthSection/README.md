@@ -4,6 +4,6 @@
 
 * How to execute it?
   * In the irb console
-    * `require 'task.rb''`
+    * `load 'task.rb''`
     * `task = Task.new`
     * 
